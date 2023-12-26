@@ -134,9 +134,26 @@ def create_table(connection):
     
     create_table_func = '''
         CREATE TABLE IF NOT EXISTS Players (
-            id INTEGER PRIMARY KEY,
-            name TEXT,
-            airballs INTEGER
+            id              INTEGER PRIMARY KEY,
+            name            TEXT,
+            airballs        INTEGER DEFAULT (0),
+            too_shorts      INTEGER DEFAULT (0),
+            table_hits      INTEGER DEFAULT 0,
+            cup_hits        INTEGER DEFAULT 0,
+            pts1            INTEGER DEFAULT 0,
+            pts2            INTEGER DEFAULT 0,
+            sinks           INTEGER DEFAULT 0,
+            catch1s         INTEGER DEFAULT 0,
+            catch2s         INTEGER DEFAULT 0,
+            drop1s          INTEGER DEFAULT 0,
+            drop2s          INTEGER DEFAULT 0,
+            fifa_fails      INTEGER DEFAULT 0,
+            fifa_succs      INTEGER DEFAULT 0,
+            tosses          INTEGER DEFAULT 0,
+            tosses_defended INTEGER DEFAULT 0,
+            wins            INTEGER DEFAULT 0,
+            losses          INTEGER DEFAULT 0,
+            games           INTEGER DEFAULT 0
         )
     '''
 
